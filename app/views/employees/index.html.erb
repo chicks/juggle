@@ -1,0 +1,35 @@
+<div class="container" style="width:500px">
+	<div id="user-grid"></div>
+</div>
+
+<table>
+
+  <tr>
+    <th>Name</th>	
+	<th>Title</th>
+	<th>Manager</th>
+	<th>Department</th>
+	<th>Location</th>
+	<th>Phone Number</th>
+	<th>E-Mail Address</th>
+	<th>IM</th>			
+	<th>Action</th>
+  </tr>
+  
+<% @employees.each do |e| -%>
+  <tr id="employee_details_<%= e.id %>">
+  	<td><%= e.name %></td>
+	<td><%= e.title %></td>
+	<td><%= e.manager.name %></td>
+	<td><%= e.department.name %></td>
+	<td><%= e.location.name %></td>
+	<td><%= e.phone_number.number %></td>	
+	<td><%= e.email_address.address %></td>	
+	<td><%= e.im_handle.name %></td>	
+  </tr>
+  <tr>
+  	
+  </tr>
+<% end -%>
+
+</table>

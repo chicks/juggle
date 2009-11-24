@@ -1,0 +1,130 @@
+  [4;36;1mEmployee Load (0.0ms)[0m   [0;1mSELECT * FROM "employees" LIMIT 1[0m
+  [4;35;1mEmployee Load (0.0ms)[0m   [0mSELECT * FROM "employees" WHERE ("employees"."id" = 2) [0m
+  [4;36;1mEmployee Load (0.0ms)[0m   [0;1mSELECT * FROM "employees" LIMIT 1[0m
+  [4;35;1mEmployee Load (0.0ms)[0m   [0mSELECT * FROM "employees" WHERE ("employees"."id" = 2) [0m
+  [4;36;1mEmployee Load (0.0ms)[0m   [0;1mSELECT * FROM "employees" WHERE ("employees"."name" = 'Igor Spivak') LIMIT 1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mEmployee Load (0.0ms)[0m   [0;1mSELECT * FROM "employees" WHERE ("employees"."name" = 'Igor Spivak') LIMIT 1[0m
+  [4;35;1mEmployee Load (0.0ms)[0m   [0mSELECT * FROM "employees" LIMIT 1[0m
+  [4;36;1mEmployee Load (0.0ms)[0m   [0;1mSELECT * FROM "employees" WHERE ("employees"."id" = 2) [0m
+  [4;36;1mEmployee Load (0.0ms)[0m   [0;1mSELECT * FROM "employees" WHERE ("employees"."name" = 'Igor Spivak') LIMIT 1[0m
+  [4;35;1mEmployee Load (0.0ms)[0m   [0mSELECT * FROM "employees" LIMIT 1[0m
+  [4;36;1mEmployee Load (0.0ms)[0m   [0;1mSELECT * FROM "employees" WHERE ("employees"."id" = 2) [0m
+  [4;36;1mEmployee Load (0.0ms)[0m   [0;1mSELECT * FROM "employees" WHERE ("employees"."name" = 'Igor Spivak') LIMIT 1[0m
+  [4;35;1mEmployee Load (0.0ms)[0m   [0mSELECT * FROM "employees" LIMIT 1[0m
+  [4;36;1mEmployee Load (0.0ms)[0m   [0;1mSELECT * FROM "employees" WHERE ("employees"."id" = 2) [0m
+  [4;36;1mEmployee Load (0.0ms)[0m   [0;1mSELECT * FROM "employees" WHERE ("employees"."name" = 'Igor Spivak') LIMIT 1[0m
+  [4;35;1mEmployee Load (0.0ms)[0m   [0mSELECT * FROM "employees" LIMIT 1[0m
+  [4;36;1mEmployee Load (0.0ms)[0m   [0;1mSELECT * FROM "employees" WHERE ("employees"."id" = 2) [0m
+  [4;36;1mDepartment Load (0.0ms)[0m   [0;1mSELECT * FROM "departments" LIMIT 1[0m
+  [4;35;1mEmployee Load (0.0ms)[0m   [0mSELECT * FROM "employees" LIMIT 1[0m
+  [4;36;1mDepartment Load (0.0ms)[0m   [0;1mSELECT * FROM "departments" WHERE ("departments"."id" = 1) [0m
+  [4;35;1mEmployee Load (0.0ms)[0m   [0mSELECT * FROM "employees" WHERE ("employees"."name" = 'Igor Spivak') LIMIT 1[0m
+  [4;36;1mEmployee Load (0.0ms)[0m   [0;1mSELECT * FROM "employees" LIMIT 1[0m
+  [4;35;1mEmployee Load (0.0ms)[0m   [0mSELECT * FROM "employees" WHERE ("employees"."id" = 2) [0m
+  [4;36;1mEmployee Load (0.0ms)[0m   [0;1mSELECT * FROM "employees" LIMIT 1[0m
+  [4;35;1mEmployee Load (0.0ms)[0m   [0mSELECT * FROM "employees" WHERE ("employees"."name" = 'Igor Spivak') LIMIT 1[0m
+  [4;36;1mEmployee Load (0.0ms)[0m   [0;1mSELECT * FROM "employees" WHERE ("employees".manager_id = 2) [0m
+  [4;36;1mDepartment Load (0.0ms)[0m   [0;1mSELECT * FROM "departments" LIMIT 1[0m
+  [4;35;1mEmployee Load (0.0ms)[0m   [0mSELECT * FROM "employees" LIMIT 1[0m
+  [4;36;1mDepartment Load (0.0ms)[0m   [0;1mSELECT * FROM "departments" WHERE ("departments"."id" = 1) [0m
+  [4;35;1mEmployee Load (0.0ms)[0m   [0mSELECT * FROM "employees" WHERE ("employees"."name" = 'Igor Spivak') LIMIT 1[0m
+  [4;36;1mEmployee Load (0.0ms)[0m   [0;1mSELECT * FROM "employees" LIMIT 1[0m
+  [4;35;1mEmployee Load (0.0ms)[0m   [0mSELECT * FROM "employees" WHERE ("employees"."id" = 2) [0m
+  [4;36;1mEmployee Load (15.0ms)[0m   [0;1mSELECT * FROM "employees" LIMIT 1[0m
+  [4;35;1mEmployee Load (0.0ms)[0m   [0mSELECT * FROM "employees" WHERE ("employees"."name" = 'Igor Spivak') LIMIT 1[0m
+  [4;36;1mEmployee Load (0.0ms)[0m   [0;1mSELECT * FROM "employees" WHERE ("employees".manager_id = 2) [0m
+
+
+Processing EmployeeController#index (for 0.0.0.0 at 2009-08-27 16:11:27) [GET]
+  [4;36;1mEmployee Load (0.0ms)[0m   [0;1mSELECT * FROM "employees" [0m
+  [4;36;1mDepartment Load (0.0ms)[0m   [0;1mSELECT * FROM "departments" LIMIT 1[0m
+  [4;35;1mEmployee Load (0.0ms)[0m   [0mSELECT * FROM "employees" LIMIT 1[0m
+  [4;36;1mDepartment Load (0.0ms)[0m   [0;1mSELECT * FROM "departments" WHERE ("departments"."id" = 1) [0m
+  [4;35;1mEmployee Load (0.0ms)[0m   [0mSELECT * FROM "employees" WHERE ("employees"."name" = 'Igor Spivak') LIMIT 1[0m
+  [4;36;1mEmployee Load (0.0ms)[0m   [0;1mSELECT * FROM "employees" LIMIT 1[0m
+  [4;35;1mEmployee Load (0.0ms)[0m   [0mSELECT * FROM "employees" WHERE ("employees"."id" = 2) [0m
+  [4;36;1mEmployee Load (0.0ms)[0m   [0;1mSELECT * FROM "employees" LIMIT 1[0m
+  [4;35;1mEmployee Load (0.0ms)[0m   [0mSELECT * FROM "employees" WHERE ("employees"."name" = 'Igor Spivak') LIMIT 1[0m
+  [4;36;1mEmployee Load (0.0ms)[0m   [0;1mSELECT * FROM "employees" WHERE ("employees".manager_id = 2) [0m
+
+
+Processing EmployeeController#index (for 0.0.0.0 at 2009-08-27 16:18:40) [GET]
+  [4;36;1mEmployee Load (0.0ms)[0m   [0;1mSELECT * FROM "employees" [0m
+Rendering employee/index
+  [4;36;1mDepartment Load (0.0ms)[0m   [0;1mSELECT * FROM "departments" LIMIT 1[0m
+  [4;35;1mEmployee Load (15.0ms)[0m   [0mSELECT * FROM "employees" LIMIT 1[0m
+  [4;36;1mDepartment Load (0.0ms)[0m   [0;1mSELECT * FROM "departments" WHERE ("departments"."id" = 1) [0m
+  [4;35;1mEmployee Load (0.0ms)[0m   [0mSELECT * FROM "employees" WHERE ("employees"."name" = 'Igor Spivak') LIMIT 1[0m
+  [4;36;1mEmployee Load (0.0ms)[0m   [0;1mSELECT * FROM "employees" LIMIT 1[0m
+  [4;35;1mEmployee Load (0.0ms)[0m   [0mSELECT * FROM "employees" WHERE ("employees"."id" = 2) [0m
+  [4;36;1mEmployee Load (0.0ms)[0m   [0;1mSELECT * FROM "employees" LIMIT 1[0m
+  [4;35;1mEmployee Load (0.0ms)[0m   [0mSELECT * FROM "employees" WHERE ("employees"."name" = 'Igor Spivak') LIMIT 1[0m
+  [4;36;1mEmployee Load (0.0ms)[0m   [0;1mSELECT * FROM "employees" WHERE ("employees".manager_id = 2) [0m
+
+
+Processing EmployeeController#index (for 0.0.0.0 at 2009-08-27 16:20:03) [GET]
+  [4;36;1mEmployee Load (0.0ms)[0m   [0;1mSELECT * FROM "employees" [0m
+Rendering employee/index
+  [4;35;1mEmployee Load (0.0ms)[0m   [0mSELECT * FROM "employees" WHERE ("employees"."id" = 2) [0m
+  [4;36;1mDepartment Load (0.0ms)[0m   [0;1mSELECT * FROM "departments" LIMIT 1[0m
+  [4;35;1mEmployee Load (0.0ms)[0m   [0mSELECT * FROM "employees" LIMIT 1[0m
+  [4;36;1mDepartment Load (0.0ms)[0m   [0;1mSELECT * FROM "departments" WHERE ("departments"."id" = 1) [0m
+  [4;35;1mEmployee Load (0.0ms)[0m   [0mSELECT * FROM "employees" WHERE ("employees"."name" = 'Igor Spivak') LIMIT 1[0m
+  [4;36;1mEmployee Load (0.0ms)[0m   [0;1mSELECT * FROM "employees" LIMIT 1[0m
+  [4;35;1mEmployee Load (0.0ms)[0m   [0mSELECT * FROM "employees" WHERE ("employees"."id" = 2) [0m
+  [4;36;1mEmployee Load (0.0ms)[0m   [0;1mSELECT * FROM "employees" LIMIT 1[0m
+  [4;35;1mEmployee Load (0.0ms)[0m   [0mSELECT * FROM "employees" WHERE ("employees"."name" = 'Igor Spivak') LIMIT 1[0m
+  [4;36;1mEmployee Load (0.0ms)[0m   [0;1mSELECT * FROM "employees" WHERE ("employees".manager_id = 2) [0m
+
+
+Processing EmployeeController#index (for 0.0.0.0 at 2009-08-27 16:20:39) [GET]
+  [4;36;1mEmployee Load (0.0ms)[0m   [0;1mSELECT * FROM "employees" [0m
+Rendering employee/index
+  [4;35;1mEmployee Load (0.0ms)[0m   [0mSELECT * FROM "employees" WHERE ("employees"."id" = 2) [0m
+  [4;36;1mDepartment Load (0.0ms)[0m   [0;1mSELECT * FROM "departments" WHERE ("departments"."id" = 1) [0m
+  [4;35;1mEmployee Load (0.0ms)[0m   [0mSELECT * FROM "employees" WHERE ("employees"."id" = 3) [0m
+  [4;36;1mDepartment Load (0.0ms)[0m   [0;1mSELECT * FROM "departments" WHERE ("departments"."id" = 1) [0m
+  [4;35;1mEmployee Load (0.0ms)[0m   [0mSELECT * FROM "employees" WHERE ("employees"."id" = 4) [0m
+  [4;36;1mDepartment Load (0.0ms)[0m   [0;1mSELECT * FROM "departments" WHERE ("departments"."id" = 1) [0m
+  [4;35;1mEmployee Load (0.0ms)[0m   [0mSELECT * FROM "employees" WHERE ("employees"."id" = 4) [0m
+  [4;36;1mDepartment Load (0.0ms)[0m   [0;1mSELECT * FROM "departments" WHERE ("departments"."id" = 2) [0m
+Completed in 31ms (View: 31, DB: 0) | 200 OK [http://test.host/employee]
+  [4;36;1mDepartment Load (0.0ms)[0m   [0;1mSELECT * FROM "departments" LIMIT 1[0m
+  [4;35;1mEmployee Load (0.0ms)[0m   [0mSELECT * FROM "employees" LIMIT 1[0m
+  [4;36;1mDepartment Load (0.0ms)[0m   [0;1mSELECT * FROM "departments" WHERE ("departments"."id" = 1) [0m
+  [4;35;1mEmployee Load (0.0ms)[0m   [0mSELECT * FROM "employees" WHERE ("employees"."name" = 'Igor Spivak') LIMIT 1[0m
+  [4;36;1mEmployee Load (0.0ms)[0m   [0;1mSELECT * FROM "employees" LIMIT 1[0m
+  [4;35;1mEmployee Load (0.0ms)[0m   [0mSELECT * FROM "employees" WHERE ("employees"."id" = 2) [0m
+  [4;36;1mEmployee Load (0.0ms)[0m   [0;1mSELECT * FROM "employees" LIMIT 1[0m
+  [4;35;1mEmployee Load (0.0ms)[0m   [0mSELECT * FROM "employees" WHERE ("employees"."name" = 'Igor Spivak') LIMIT 1[0m
+  [4;36;1mEmployee Load (0.0ms)[0m   [0;1mSELECT * FROM "employees" WHERE ("employees".manager_id = 2) [0m
+
+
+Processing EmployeesController#index (for 0.0.0.0 at 2009-08-27 16:28:59) [GET]
+  [4;36;1mEmployee Load (0.0ms)[0m   [0;1mSELECT * FROM "employees" [0m
+Rendering employees/index
+  [4;35;1mEmployee Load (0.0ms)[0m   [0mSELECT * FROM "employees" WHERE ("employees"."id" = 2) [0m
+  [4;36;1mDepartment Load (0.0ms)[0m   [0;1mSELECT * FROM "departments" WHERE ("departments"."id" = 1) [0m
+  [4;35;1mEmployee Load (0.0ms)[0m   [0mSELECT * FROM "employees" WHERE ("employees"."id" = 3) [0m
+  [4;36;1mDepartment Load (0.0ms)[0m   [0;1mSELECT * FROM "departments" WHERE ("departments"."id" = 1) [0m
+  [4;35;1mEmployee Load (0.0ms)[0m   [0mSELECT * FROM "employees" WHERE ("employees"."id" = 4) [0m
+  [4;36;1mDepartment Load (0.0ms)[0m   [0;1mSELECT * FROM "departments" WHERE ("departments"."id" = 1) [0m
+  [4;35;1mEmployee Load (0.0ms)[0m   [0mSELECT * FROM "employees" WHERE ("employees"."id" = 4) [0m
+  [4;36;1mDepartment Load (0.0ms)[0m   [0;1mSELECT * FROM "departments" WHERE ("departments"."id" = 2) [0m
+Completed in 31ms (View: 31, DB: 0) | 200 OK [http://test.host/employees]

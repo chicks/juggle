@@ -1,0 +1,45 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+1:
+  id: 1
+  name: Charles Hicks
+  legal_name: Carl Hicks
+  title: IT Manager
+  status: Active
+  start_of_employment: 2009-05-11
+  manager_id: 2
+  department_id: 1
+  location_id: 1
+  
+2:
+  id: 2 
+  name: Igor Spivak
+  legal_name: Igor Spivak
+  title: Director of OD-IT
+  status: Active
+  start_of_employment: 2009-01-01
+  manager_id: 3
+  department_id: 1
+  location_id: 1
+  
+3: 
+  id: 3
+  name: Lila Tretikov
+  legal_name: Lila Tretikov
+  title: Chief Information Officer
+  status: Active
+  start_of_employment: 2009-01-01  
+  manager_id: 4
+  department_id: 1
+  location_id: 1
+    
+4:
+  id: 4
+  name: Larry Augustin
+  legal_name: Larry Augustin
+  title: Chief Executive Officer
+  status: Active
+  start_of_employment: 2009-01-01  
+  manager_id: 4
+  department_id: 2      
+  location_id: 1

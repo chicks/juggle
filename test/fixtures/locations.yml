@@ -1,0 +1,10 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+1: 
+  id: 1
+  name: Headquarters
+  street_address: 10050 N. Wolfe Road SW2-130
+  city: Cupertino
+  state: CA
+  postal_code: 95051
+  country: USA

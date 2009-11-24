@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+1:
+  address: chicks@sugarcrm.com
+  is_primary: 1
+  employee_id: 1
+  
+2:
+  address: carl.hicks@sugarcrm.com
+  is_primary: 0
+  employee_id: 1

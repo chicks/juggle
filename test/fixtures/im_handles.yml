@@ -1,0 +1,15 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+1:
+  name: carlhicksatwork
+  provider: Yahoo!
+  is_primary: 1
+  employee_id: 1
+  
+2:
+  name: carlhicksatwork
+  provider: AIM
+  is_primary: 0
+  employee_id: 1
+  
+  
