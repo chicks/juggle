@@ -6,7 +6,7 @@ namespace :db do ; namespace :import do
    
     manager     = Employee.find_by_name(employee.reports_to)
     department  = Department.find_by_name(employee.department)
-    location    = Location.find()
+    location    = Location.find_by_address()
 
     # If we don't have an employee record for the manager, we need to create one. 
     until manager.class == Employee
@@ -23,7 +23,13 @@ namespace :db do ; namespace :import do
     
     # Create any missing locations
     if location == nil
-      
+      location = Location.new
+      location.name = ""
+      location.street_address =""
+      location.city = ""
+      location.state = ""
+      location.postal_code = ""
+      location.country = ""
     end
     
     e            = Employee.new
