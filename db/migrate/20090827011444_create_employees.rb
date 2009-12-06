@@ -5,6 +5,7 @@ class CreateEmployees < ActiveRecord::Migration
       t.string :legal_name
       t.string :title
       t.string :status
+      t.string :user_name
       t.date :start_of_employment
       t.date :end_of_employment   
 
