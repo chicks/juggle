@@ -23,7 +23,28 @@ class Employee < ActiveRecord::Base
   has_many :email_addresses
   has_many :phone_numbers
   has_many :im_handles
-  
+
+  def give_name
+    legal_name.split[0]
+  end
+
+  def first_name
+    name.split[0]
+  end
+
+  def last_name
+    name.split[-1]
+  end
+
+  # Alias for location
+  def address
+    location
+  end
+
+  def address=(address)
+    location = address
+  end
+
   # Convenience method for returning the primary phone number
   def phone_number
     number = PhoneNumber.new

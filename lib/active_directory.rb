@@ -1,80 +1,16 @@
-module Employee
-
-BASE        = "dc=sugarcrm, dc=net"
-COMPANY     = "SugarCRM Inc."
-
-class Address
-  attr :type, true
-  attr :street, true
-  attr :unit, true
-  attr :city, true
-  attr :state, true
-  attr :postal_code, true
-  attr :country, true
-
-  def initialize(type, street, unit, city, state, postal_code, country)
-    @type   = type
-    @street = street
-    @unit   = unit
-    @city   = city
-    @state  = state
-    @postal_code = postal_code
-    @country = country
-  end
-  
-end
-
-class Department
-  attr :name, true
-  attr :number, true
-end
-
-class Employee
-  attr :name, true
-  attr :legal_name, true
-  attr :title, true
-  attr :manager, true
-  attr :department, true
-  attr :region, true
-  attr :office, true
-  attr :address, true
-
-  def initialize()
-  end
-
-  def given_name
-    @legal_name.split[0]
-  end
-
-  def first_name
-    @name.split[0]
-  end
-
-  def last_name
-    @name.split[-1]
-  end
-
-  def to_s
-    "#{@legal_name}"
-  end
-
-  protected
-
-    def user_name!
-      @user_name = (first_name[0,1] + last_name).downcase
-    end
-
-end
-
+module Adapter
 
 class ActiveDirectory
   require 'rubygems'
   require 'net/ldap'
 
-  HOST = "10.8.1.101"
-  PORT = "389"
-  USER = "CN=Charles Hicks Admin,OU=CUP1,OU=Domain Admins,DC=sugarcrm,DC=net"
-  PASS = "99r3db@l"
+  # TODO: Refactor these into a config file
+  BASE        = "dc=sugarcrm, dc=net"
+  COMPANY     = "SugarCRM Inc."
+  HOST        = "10.8.1.101"
+  PORT        = "389"
+  USER        = "CN=Charles Hicks Admin,OU=CUP1,OU=Domain Admins,DC=sugarcrm,DC=net"
+  PASS        = "99r3db@l"
 
   attr :connection, true
   attr :connected, true
