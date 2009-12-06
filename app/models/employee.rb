@@ -50,5 +50,5 @@ class Employee < ActiveRecord::Base
     end
     im
   end
- 
+
 end
