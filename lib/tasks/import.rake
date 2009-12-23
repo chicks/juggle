@@ -2,6 +2,12 @@ require 'tsv2class'
 
 namespace :db do ; namespace :import do 
   
+
+  # 
+  #  This is a big recursive method.  It will keep calling itself until it can resolve any missing employees.
+  # Recursion is neccessary because you need to add an employee's manager before you add the employee, and I 
+  # didn't want to enforce order in the import file       
+  #   
   def create_employee(employee, employees)
    
     manager     = Employee.find_by_name(employee.reports_to)
