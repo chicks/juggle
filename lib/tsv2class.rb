@@ -11,6 +11,8 @@ require 'ftools'
 # TODO: Add argument to initialize to pass in header line.
 #
 class Tsv2Class
+  include Enumerable
+
   attr :klass
   attr :eval_klass
   attr :header
@@ -27,6 +29,11 @@ class Tsv2Class
         eval "@rows << #{@klass}.new(line)\n"
       end
     end
+  end
+
+  def each
+    @rows.each { |o| yield(o) }
+    self
   end
 
   def new_class(klass)
