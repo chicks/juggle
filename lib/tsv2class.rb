@@ -36,6 +36,10 @@ class Tsv2Class
     self
   end
 
+  def index(row)
+    @rows.index(row)
+  end
+
   def new_class(klass)
     @eval_klass = "class #{klass}\n"
     csv_init  = "  def initialize(row)\n"

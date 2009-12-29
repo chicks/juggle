@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20091123225742) do
+ActiveRecord::Schema.define(:version => 20091229021739) do
 
   create_table "departments", :force => true do |t|
     t.string   "name"
@@ -33,6 +33,7 @@ ActiveRecord::Schema.define(:version => 20091123225742) do
     t.string   "legal_name"
     t.string   "title"
     t.string   "status"
+    t.string   "user_name"
     t.date     "start_of_employment"
     t.date     "end_of_employment"
     t.integer  "manager_id"
@@ -57,6 +58,15 @@ ActiveRecord::Schema.define(:version => 20091123225742) do
 
   add_index "im_handles", ["employee_id"], :name => "index_im_handles_on_employee_id"
 
+  create_table "location_aliases", :force => true do |t|
+    t.string   "name"
+    t.integer  "location_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "location_aliases", ["name"], :name => "index_location_aliases_on_name"
+
   create_table "locations", :force => true do |t|
     t.string   "name"
     t.string   "street_address"
@@ -64,6 +74,7 @@ ActiveRecord::Schema.define(:version => 20091123225742) do
     t.string   "state"
     t.string   "postal_code"
     t.string   "country"
+    t.string   "coordinates"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

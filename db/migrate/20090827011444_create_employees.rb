@@ -19,6 +19,9 @@ class CreateEmployees < ActiveRecord::Migration
     add_index :employees, :manager_id
     add_index :employees, :department_id
     add_index :employees, :location_id
+
+    # we need this employee object to occupy the top of the tree.
+    Employee.connection.execute("insert into employees values (1,'Root','Root','Root','Internal','','','',1,'','','','')")
     
   end
 

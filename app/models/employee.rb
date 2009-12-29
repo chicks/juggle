@@ -24,7 +24,7 @@ class Employee < ActiveRecord::Base
   has_many :phone_numbers
   has_many :im_handles
 
-  def give_name
+  def given_name
     legal_name.split[0]
   end
 
