@@ -1,7 +1,7 @@
 class EmployeesController < ApplicationController
   
   def index
-    @employees = Employee.all
+    @employees = Employee.find(:all, :conditions => {:status => "Active"})
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @employees }
