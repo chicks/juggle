@@ -8,6 +8,7 @@ class CreateLocationAliases < ActiveRecord::Migration
     end
 
     add_index(:location_aliases, :name)
+    add_index(:location_aliases, :location_id)
   end
 
   def self.down
