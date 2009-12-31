@@ -65,6 +65,7 @@ ActiveRecord::Schema.define(:version => 20091229021739) do
     t.datetime "updated_at"
   end
 
+  add_index "location_aliases", ["location_id"], :name => "index_location_aliases_on_location_id"
   add_index "location_aliases", ["name"], :name => "index_location_aliases_on_name"
 
   create_table "locations", :force => true do |t|

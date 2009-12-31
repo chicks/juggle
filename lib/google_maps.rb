@@ -32,7 +32,6 @@ def self.lookup(addr)
     when "620" then raise "G_GEO_TOO_MANY_QUERIES"
   end
 
-  pp json
   accuracy = json["Placemark"][0]["AddressDetails"]["Accuracy"].to_i
   raise AccuracyException, "Accuracy of #{accuracy} below accepted minimum" if accuracy < MIN_ACCURACY
 
