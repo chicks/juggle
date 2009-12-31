@@ -16,7 +16,11 @@
 <tr id="employee_details_<%= e.id %>">
 	<td><%= e.name %></td>
 	<td><%= e.title %></td>
+<% if e.manager.name -%>
 	<td><%= e.manager.name %></td>
+<% else -%>
+  <td></td>
+<% end -%>
 	<td><%= e.department.name %></td>
 	<td><%= e.location.name %></td>
 	<td><%= e.phone_number.number %></td>	
