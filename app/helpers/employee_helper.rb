@@ -1,41 +1,69 @@
 module EmployeeHelper
 
 # Generate a simple ul/li tree of employees and their subordinates
-def subordinates_tree(employee, options={})
+def subordinates_tree(employee, options = {})
   
   options[:indent] ? indent = options[:indent] : indent = 1
   options[:max_depth] ? max_depth = options[:max_depth] : max_depth = 0
+  options[:display_depth] ? display_depth = options[:display_depth] : display_depth = 1000
+  options[:depth] ? depth = options[:depth] : depth = 0
+  options[:root] ? root = true : root = false
 
   tree = ""
 
-  indent!(tree, indent)
-  tree << "<ul>\n" 
-  indent += 1
+  if root
+    indent!(tree, indent)
+    tree << "<ul>\n"
+    indent += 1 
+  end
 
   if employee.subordinates.length > 0
 
+    depth += 1
+
     indent!(tree, indent)
     tree << "<li>#{employee.name}\n" 
+    indent += 1 
 
-    employee.subordinates.each do |s|
-      tree << subordinates_tree(s, options = {:indent => indent.next })
+    indent!(tree, indent)
+
+    if display_depth > depth
+      tree << "<ul>\n"
+    else 
+      tree << "<ul style=\"display: none\">\n"
+    end
+    indent += 1 
+
+    employee.subordinates.sort_by { |e| e.last_name }.each do |s|
+      tree << subordinates_tree(s, options = {:indent => indent, :depth => depth , :display_depth => display_depth})
     end
 
+    indent -= 1 
+    indent!(tree, indent)
+    tree << "</ul>\n"
+
+    indent -= 1 
     indent!(tree, indent)
     tree << "</li>\n"
 
   else 
 
     indent!(tree, indent)
-    tree << "<li>#{employee.name}</li>\n"
+    if display_depth > depth
+      tree << "<li>#{employee.name}</li>\n"
+    else 
+      tree << "<li style=\"display: none\">#{employee.name}</li>\n"
+    end 
 
   end
 
-  indent -= 1
-  indent!(tree, indent)
-  tree << "</ul>\n" 
+  if root
+    indent -= 1
+    indent!(tree, indent)
+    tree << "</ul>\n"
+  end
 
-  return tree
+  tree
 
 end
 
