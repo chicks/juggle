@@ -24,6 +24,9 @@ def self.lookup(addr)
   # Remove hyphens...
   address = addr.gsub(/-/, '') 
 
+  # If we end up with an empty address, throw an argument exception.
+  raise ArgumentError, "Empty address!" if address.length < 5
+
   # Ask google to look it up
   query         = "http://maps.google.com/maps/geo?q=" << URI.escape(address) <<  "&output=json&sensor=false&key=" << KEY
   response      = Net::HTTP.get_response(URI.parse(query))

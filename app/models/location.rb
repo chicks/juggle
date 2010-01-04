@@ -59,6 +59,10 @@ class Location < ActiveRecord::Base
           # The address we submitted didn't return a strong result
           # Assign this location to the "Unknown" object   
           addr[:coordinates] = "0,0,0"
+        rescue ArgumentError
+          # The address we submitted was blank
+          # Assign this location to the "Unknown" object   
+          addr[:coordinates] = "0,0,0"
         end
         l = Location.find_by_coordinates(addr[:coordinates])
         if l
