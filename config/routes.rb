@@ -1,5 +1,5 @@
 ActionController::Routing::Routes.draw do |map|
-   map.connect 'employees/organization', :controller => 'employees', :action => 'organization', :conditions => { :method => :get }
+   map.connect 'employees/json', :controller => 'employees', :action => 'json', :conditions => { :method => :get }
    map.resources :employees
 
   # The priority is based upon order of creation: first created -> highest priority.

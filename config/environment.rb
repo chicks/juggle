@@ -20,7 +20,9 @@ Rails::Initializer.run do |config|
   config.gem "diff-lcs", :lib => "diff/lcs"
   config.gem "nokogiri"
   config.gem "builder"
-  config.gem "json_pure", :lib => "json/pure"
+  # This gem is required for the importer, but it collides with the ActiveRecord JSON serializer
+  # require it, but don't load it.
+  config.gem "json", :lib => false
   # config.gem "hpricot", :version => '0.6', :source => "http://code.whytheluckystiff.net"
   # config.gem "sqlite3-ruby", :lib => "sqlite3"
   # config.gem "aws-s3", :lib => "aws/s3"

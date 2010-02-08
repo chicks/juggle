@@ -1,16 +1,25 @@
 module EmployeeHelper
 
-# Generate a simple ul/li tree of employees and their subordinates
+
 def subordinates_tree(employee, options = {})
+  case options[:format]
+    when "html" then subordinates_tree_html(employee, options)
+    when "json" then subordinates_tree_json(employee, options)
+    else raise RuntimeError, "Unknown format: #{options[:format]}"
+  end
+end
+
+# Generate a simple ul/li tree of employees and their subordinates
+def subordinates_tree_html(employee, options ={})
   
   options[:indent] ? indent = options[:indent] : indent = 1
   options[:max_depth] ? max_depth = options[:max_depth] : max_depth = 0
   options[:display_depth] ? display_depth = options[:display_depth] : display_depth = 1000
   options[:depth] ? depth = options[:depth] : depth = 0
   options[:root] ? root = true : root = false
-
+  
   tree = ""
-
+  
   if root
     indent!(tree, indent)
     tree << "<ul>\n"
@@ -35,7 +44,7 @@ def subordinates_tree(employee, options = {})
     indent += 1 
 
     employee.subordinates.sort_by { |e| e.last_name }.each do |s|
-      tree << subordinates_tree(s, options = {:indent => indent, :depth => depth , :display_depth => display_depth})
+      tree << subordinates_tree_html(s, options = {:indent => indent, :depth => depth , :display_depth => display_depth})
     end
 
     indent -= 1 
@@ -64,7 +73,10 @@ def subordinates_tree(employee, options = {})
   end
 
   tree
+end
 
+def subordinates_tree_json(employee, options = {})  
+  
 end
 
 def indent!(text, depth)

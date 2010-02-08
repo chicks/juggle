@@ -24,6 +24,9 @@ class Employee < ActiveRecord::Base
   has_many :phone_numbers
   has_many :im_handles
 
+  # This is really a tree structure
+  acts_as_tree :foreign_key => :manager_id, :order => :name
+
   def given_name
     legal_name.split[0]
   end
@@ -71,5 +74,13 @@ class Employee < ActiveRecord::Base
     end
     im
   end
+  
+  def Employee.all
+    Employee.find(:all, :conditions => {:status => "Active"})
+  end
+  
+  def Employee.root
+    Employee.find_by_name("Root")
+  end  
 
 end

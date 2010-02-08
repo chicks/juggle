@@ -1,0 +1,87 @@
+<script type="text/javascript" src="/employees/new.js"></script>
+
+<h1>New Employee</h1>
+
+<style>
+    #tabs{
+        margin-left: 4px;
+        padding: 0;
+        background: transparent;
+        voice-family: "\"}\"";
+        voice-family: inherit;
+        padding-left: 5px;
+    }
+    #tabs ul{
+        font: bold 11px Arial, Verdana, sans-serif;
+        margin:0;
+        padding:0;
+        list-style:none;
+    }
+    #tabs li{
+        display:inline;
+        margin:0 2px 0 0;
+        padding:0;
+        text-transform:uppercase;
+    }
+    #tabs a{
+        float:left;
+        background:#A3BBE6 url(images/tabs_left.gif) no-repeat left top;
+        margin:0 2px 0 0;
+        padding:0 0 1px 3px;
+        text-decoration:none;
+    }
+    #tabs a span{
+        float:left;
+        display:block;
+        background: transparent url(images/tabs_right.gif) no-repeat right top;
+        padding:4px 9px 2px 6px;
+    }
+    #tabs a span{float:none;}
+    #tabs a:hover{background-color: #7E94B9;color: white;}
+    #tabs a:hover span{background-color: #7E94B9;}
+    #tabHeaderActive span, #tabHeaderActive a { background-color: #42577B; color:#fff;}
+    .tabContent {
+        clear:both;
+        border:2px solid #42577B;
+        padding-top:2px;
+        background-color:#FFF;
+    }
+</style>
+
+<div id="tabs">
+  <ul>
+    <li style="margin-left: 1px" id="tabHeaderActive"><a href="javascript:void(0)" onClick="toggle_tab(1,6)"><span>Personal</span></a></li>
+    <li id="tabHeader2"><a href="javascript:void(0)" onClick="toggle_tab(2,6)" ><span>Professional</span></a></li>
+    <li id="tabHeader3"><a href="javascript:void(0)" onclick="toggle_tab(3,6)"><span>Equipment</span></a></li>
+    <li id="tabHeader4"><a href="javascript:void(0)" onClick="toggle_tab(4,6)"><span>Tab 4</span></a></li>
+    <li id="tabHeader5"><a href="javascript:void(0)" onclick="toggle_tab(5,6);"><span>Tab 5</span></a></li>
+    <li id="tabHeader6"><a href="javascript:void(0)" onclick="toggle_tab(6,6);"><span>Tab 6</span></a></li>
+  </ul>
+</div>
+
+<div id="tabscontent">
+  <div id="tabContent1" class="tabContent" style="display:yes;">
+            <br /><div>First Tab Content goes here</div>
+        </div>
+
+        <div id="tabContent2" class="tabContent" style="display:none;">
+            <br /><div>Second Tab Content goes here</div>
+        </div>
+
+        <div id="tabContent3" class="tabContent" style="display:none;">
+            <br /><div>Third Tab Content goes here</div>
+        </div>
+
+        <div id="tabContent4" class="tabContent" style="display:none;">
+            <br /><div>Fourth Tab Content goes here</div>
+        </div>
+
+        <div id="tabContent5" class="tabContent" style="display:none;">
+            <br /><div>Fifth Tab Content goes here</div>
+        </div>
+
+        <div id="tabContent6" class="tabContent" style="display:none;">
+            <br /><div>Sixth Tab Content goes here</div>
+        </div>
+    </div><!--End of tabscontent-->
+</div><!--End of tabs-->
