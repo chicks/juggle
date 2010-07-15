@@ -1,4 +1,18 @@
 Juggle::Application.routes.draw do |map|
+  resources :departments
+
+  resources :addresses
+
+  resources :phone_numbers
+
+  resources :teams
+
+  resources :roles
+
+  resources :users
+
+  get "home/index"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
@@ -48,7 +62,7 @@ Juggle::Application.routes.draw do |map|
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  # root :to => "welcome#index"
+  root :to => "home#index"
 
   # See how all your routes lay out with "rake routes"
 
